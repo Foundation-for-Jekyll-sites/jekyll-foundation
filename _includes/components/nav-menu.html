@@ -1,0 +1,7 @@
+<nav >
+  <ul class="menu clearfix float-right">
+    {% for item in site.data.nav-main %} 
+      <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

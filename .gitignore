@@ -1,0 +1,50 @@
+# Stylesheet
+assets/css/app.css
+
+# JavaScript
+assets/js/all.js
+assets/js/all-min.js
+
+# Cache
+.sass-cache/
+*.sassc
+*.scssc
+
+# Mac OSX
+.DS_Store
+Icon
+*.swp~
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# gulp.js
+.gulp/
+node_modules/**/*
+npm-debug.log
+
+# Jekyll
+_site
+
+# Vendor directory
+assets/vendor/
+
+# Ruby
+Gemfile.lock
+
+# Composer
+composer.lock

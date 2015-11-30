@@ -1,0 +1,97 @@
+// --------------------------------------------------
+// APP.SCSS
+// --------------------------------------------------
+// This is our main SCSS file that imports everything
+// that gets compiled into app.css
+
+// Import order:
+// 1.  Encoding
+// 2.  Variables
+// 3.  Fonts
+// 4.  Foundation
+// 5.  Helpers
+//
+// SMACSS Architecture
+// 6.  Base
+// 7.  Layout
+// 8.  Modules
+// 9.  State
+// 10. Theme
+
+//
+// 1. Encoding
+// --------------------------------------------------
+@charset "UTF-8";
+
+//
+// 2. Variables
+// --------------------------------------------------
+
+// Import our global variables first so we can use
+// them in Foundations's variables file
+
+// Global Config Variables
+@import "base/config";
+
+//
+// 3. Fonts
+// --------------------------------------------------
+
+// Open Sans
+// @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+// Foundation Icon Fonts if needed for icons
+@import "../vendor/foundation-icon-fonts/foundation-icons.css";
+
+//
+// 4. Foundation
+// --------------------------------------------------
+// Source: http://foundation.zurb.com/docs/
+// Notes:
+// - Foundation's component styles are set
+//   in foundation/_settings.
+// - Modify the _settings.scss file before overriding 
+//   the component styles on your own.
+// - Need a specific foundation component? Enable it 
+//   in foundation/_foundation.scss.
+
+// Import all of Foundation
+@import "foundation/foundation";
+
+//
+// 5. Helpers
+// --------------------------------------------------
+
+// Functions
+@import "helpers/functions";
+
+// Mixins
+@import "helpers/mixins";
+
+//
+// 6. Base
+// --------------------------------------------------
+@import "base/headings";
+@import "base/links";
+
+//
+// 7. Layout
+// --------------------------------------------------
+@import "layouts/l-home";
+@import "layouts/l-default";
+@import "layouts/l-post";
+
+//
+// 8. Modules
+// --------------------------------------------------
+@import "modules/m-your-module";
+
+//
+// 9. State
+// --------------------------------------------------
+@import "states/s-your-module";
+
+//
+// 10. Theme
+// --------------------------------------------------
+@import "themes/theme";

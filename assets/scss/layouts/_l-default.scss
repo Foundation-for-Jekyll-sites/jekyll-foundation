@@ -1,0 +1,28 @@
+// --------------------------------------------------
+// Layout default
+// --------------------------------------------------
+
+header {
+  @include grid-row;
+  background-color: lightgrey;
+  
+  nav {
+    @include grid-column;
+  }
+}
+
+main {
+  @include grid-row;
+  
+  //other elements
+  //@include grid-column;
+}
+
+footer {
+  @include grid-row;
+  background-color: lightgrey;
+  
+  nav {
+    @include grid-column;
+  }
+}

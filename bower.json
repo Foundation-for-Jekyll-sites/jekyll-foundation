@@ -1,0 +1,13 @@
+{
+  "name": "jekyll-foundation",
+  "version": "0.5",
+  "description": "Starts a Jekyll + ZURB Foundation project",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "~6.0.4",
+    "motion-ui": "~1.1.0",
+    "foundation-icon-fonts": "*"
+  },
+  "private": true
+}

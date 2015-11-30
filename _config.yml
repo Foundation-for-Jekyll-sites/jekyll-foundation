@@ -1,0 +1,99 @@
+language:               ""
+title:                  "Site Title"
+description:            "Site description"
+google-verification:    ""
+
+# source:      .
+# destination: ./_site
+# plugins:     ./_plugins
+# layouts:     ./_layouts
+include:      [
+                '.htaccess', 
+                '_pages'
+              ]
+
+# exclude from the conversion and from sitemap.xml
+exclude:      [
+                'node_modules',
+                'npm-debug.log', 
+                'package.json', 
+                'bower.json',
+                'gulpfile.js', 
+                'Makefile', 
+                'composer.json', 
+                'composer.lock',
+                'README.md', 
+                'Gemfile', 
+                'Gemfile.lock', 
+                'assets/vendor/foundation-icon-fonts/*.html',
+                'assets/vendor/phpmailer/**/*.html',
+                'assets/vendor/what-input/*.html',
+                'assets/vendor/*.scss', 
+                'assets/scss/*.scss', 
+                'assets/js/app.js',
+                'assets/js/all.js'
+              ]
+# keep_files:  ['.git','.svn']
+gems:         [
+                'jekyll-sitemap', 
+                'jekyll-paginate'
+              ]
+# timezone:    nil
+# encoding:    nil
+
+# future:      true
+# show_drafts: false
+# limit_posts: 0
+# highlighter: pygments
+
+permalink: /blog/:year/:title/
+paginate_path: '/blog/page:num'
+paginate:      5
+
+# markdown:      kramdown
+# markdown_ext:  markdown,mkdown,mkdn,mkd,md
+# textile_ext:   textile
+
+# excerpt_separator: "\n\n"
+
+# safe:        false
+# watch:       false    # deprecated
+# server:      false    # deprecated
+# host:        0.0.0.0
+# port:        4000
+# url:         ""
+# baseurl:     ""
+# lsi:         false
+
+# maruku:
+#   use_tex:    false
+#   use_divs:   false
+#   png_engine: blahtex
+#   png_dir:    images/latex
+#   png_url:    /images/latex
+#   fenced_code_blocks: true
+
+# rdiscount:
+#   extensions: []
+
+# redcarpet:
+#   extensions: []
+
+# kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   smart_quotes: lsquo,rsquo,ldquo,rdquo
+#   use_coderay: false
+
+#   coderay:
+#     coderay_wrap: div
+#     coderay_line_numbers: inline
+#     coderay_line_numbers_start: 1
+#     coderay_tab_width: 4
+#     coderay_bold_every: 10
+#     coderay_css: style
+
+# redcloth:
+#   hard_breaks: true

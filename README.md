@@ -3,7 +3,7 @@
 Quickstart your Jekyll (v3) project with Zurb Foundation for Sites (v6, sass).
   
 Build process: Gulp  
-Asset management: Bower and Compass  
+Asset management: Bower and Composer  
 Deployment: Make and rsync.  
 
 ## System Preparation
@@ -49,6 +49,10 @@ Access the Browsersync UI.
 We don't want to include unused css an javascript. For the components you want to use uncomment the component's  
 1. sass in /assets/scss/foundation/_foundation.scss  
 2. javascript in the gulpfile.js in the javascript task
+
+Customize the variables used by Foundation in the settings file located in /assets/scss/foundation/.
+
+Place your custom sass in the subfolders of /assets/scss/. These folders follow the [SMACSS](https://smacss.com/) architecture. This should be the most scalable solution - from small to very large sites.
 
 ### Deploy your site
 Rsync ist used here to sync our local _site with the remote host. Adjust the SSH-USER, SSH-HOST and REMOTE-PATH in the Makefile.

@@ -46,9 +46,12 @@ Here you can access your site. If you want to access it with your phone or table
 Access the Browsersync UI. 
 
 ### Foundation for Sites Components
-We don't want to include unused css an javascript. For the components you want to use uncomment the component's  
-1. sass in /assets/scss/foundation/_foundation.scss  
-2. javascript in the gulpfile.js in the javascript task
+
+We don't want to include unused CSS an JavaScript. 
+
+	For the components you want to use, uncomment the component's  
+	1. Sass in /assets/scss/foundation/_foundation.scss  
+	2. JavaScript in the gulpfile.js in PATHS (you need to restart gulp)
 
 Customize the variables used by Foundation in the settings file located in /assets/scss/foundation/.
 
@@ -62,9 +65,7 @@ Be careful with this settings since rsync is set to **delete** the files on the 
 Deploy with `make deploy`.
 
 ## Credits
-This is based on the starting point from [@macbleser](https://github.com/macbleser/jekyll-gulp-sass-foundation).  
-
-Here's no deploying to Amazon S3, HTML minification and gulp font tasks.  
+This is based on the starting point from [@macbleser](https://github.com/macbleser/jekyll-gulp-sass-foundation) (Here's no deploying to Amazon S3, HTML minification and gulp font tasks).  
 
 The gulp plugins were upgraded.
 

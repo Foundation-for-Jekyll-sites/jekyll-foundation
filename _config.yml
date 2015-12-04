@@ -30,8 +30,7 @@ exclude:      [
                 'assets/vendor/what-input/*.html',
                 'assets/vendor/*.scss', 
                 'assets/scss/*.scss', 
-                'assets/js/app.js',
-                'assets/js/all.js'
+                'assets/js/app.js'
               ]
 # keep_files:  ['.git','.svn']
 gems:         [

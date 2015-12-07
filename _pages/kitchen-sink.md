@@ -4,7 +4,7 @@ layout: page
 title: Kitchen Sink
 ---
 
-## Accordion 
+## Accordion
 
 <ul class="accordion" data-accordion role="tablist">
   <li class="accordion-item is-active">
@@ -336,7 +336,7 @@ title: Kitchen Sink
 
 ---
 
-## Media Object 
+## Media Object
 
 <div class="media-object">
   <div class="media-object-section">
@@ -368,8 +368,8 @@ title: Kitchen Sink
 
 ---
 
-## Orbit 
- 
+## Orbit
+
 <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
   <ul class="orbit-container">
     <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
@@ -421,8 +421,8 @@ title: Kitchen Sink
 
 ---
 
-## Slider 
- 
+## Slider
+
 <div class="slider" data-slider data-initial-start='50' data-end='200'>
   <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
   <span class="slider-fill" data-slider-fill></span>
@@ -445,8 +445,8 @@ title: Kitchen Sink
 
 ---
 
-## Switch 
- 
+## Switch
+
 <div class="switch tiny">
   <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
   <label class="switch-paddle" for="tinySwitch">
@@ -459,7 +459,7 @@ title: Kitchen Sink
   <label class="switch-paddle" for="smallSwitch">
     <span class="show-for-sr">Small Portions Only</span>
   </label>
-</div> 
+</div>
 
 <div class="switch large">
   <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">

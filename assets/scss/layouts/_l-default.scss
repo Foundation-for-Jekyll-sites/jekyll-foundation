@@ -4,8 +4,8 @@
 
 header {
   @include grid-row;
-  background-color: lightgrey;
-  
+  background-color: $light-gray;
+
   nav {
     @include grid-column;
   }
@@ -13,15 +13,15 @@ header {
 
 main {
   @include grid-row;
-  
+
   //other elements
   //@include grid-column;
 }
 
 footer {
   @include grid-row;
-  background-color: lightgrey;
-  
+  background-color: $light-gray;
+
   nav {
     @include grid-column;
   }

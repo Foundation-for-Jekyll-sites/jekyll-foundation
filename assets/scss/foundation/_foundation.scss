@@ -1,11 +1,11 @@
 // --------------------------------------------------
 // Foundation
 // --------------------------------------------------
-// This file imports all of the pieces 
+// This file imports all of the pieces
 // of the Foundation framework
 
 // Make sure the charset is set appropriately
-@charset "UTF-8";
+@charset 'UTF-8';
 
 // Foundation by ZURB
 // foundation.zurb.com
@@ -16,7 +16,7 @@
 // --------------------------------------------------
 // Import the settings file where we set variables that
 // override Foundation's default styles
-@import "settings";
+@import 'settings';
 
 
 // Foundation Components

@@ -8,33 +8,34 @@ google-verification:    ""
 # plugins:     ./_plugins
 # layouts:     ./_layouts
 include:      [
-                '.htaccess', 
+                '.htaccess',
                 '_pages'
               ]
 
 # exclude from the conversion and from sitemap.xml
 exclude:      [
                 'node_modules',
-                'npm-debug.log', 
-                'package.json', 
+                'npm-debug.log',
+                'package.json',
                 'bower.json',
-                'gulpfile.js', 
-                'Makefile', 
-                'composer.json', 
+                'gulpfile.js',
+                'Makefile',
+                'composer.json',
                 'composer.lock',
-                'README.md', 
-                'Gemfile', 
-                'Gemfile.lock', 
-                'assets/vendor/foundation-icon-fonts/*.html',
+                'README.md',
+                'Gemfile',
+                'Gemfile.lock',
+                'assets/js/app.js',
+                'assets/scss/*.scss',
+                'assets/vendor/foundation-sites/',
+                'assets/vendor/jquery/',
+                'assets/vendor/motion-ui/',
                 'assets/vendor/phpmailer/**/*.html',
-                'assets/vendor/what-input/*.html',
-                'assets/vendor/*.scss', 
-                'assets/scss/*.scss', 
-                'assets/js/app.js'
+                'assets/vendor/what-input/'
               ]
 # keep_files:  ['.git','.svn']
 gems:         [
-                'jekyll-sitemap', 
+                'jekyll-sitemap',
                 'jekyll-paginate'
               ]
 # timezone:    nil

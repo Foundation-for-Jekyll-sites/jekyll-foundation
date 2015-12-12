@@ -65,9 +65,9 @@ Be careful with this settings since rsync is set to **delete** the files on the 
 Deploy with `make deploy`.
 
 ## Credits
-This is based on the starting point from [@macbleser](https://github.com/macbleser/jekyll-gulp-sass-foundation) (Here's no deploying to Amazon S3, HTML minification and gulp font tasks).  
+This package is based on the starting point from [@macbleser](https://github.com/macbleser/jekyll-gulp-sass-foundation) (Here's no deploying to Amazon S3 and gulp font tasks).  
 
-The gulp plugins were upgraded.
+The compress.html layout is provided by [@penibelst](http://jch.penibelst.de/).
 
 ## License
 This package is licensed under the terms of the MIT license.

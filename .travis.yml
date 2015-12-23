@@ -1,11 +1,17 @@
 language: node_js
+
 node_js:
   - "4.2.3"
-rvm:
-  - 2.2.3
+
+before_install:
+- rvm install 2.2.3
+
 before_script:
-  # travis runs `npm install` by default
+  # install node.js dependencies, travis runs `npm install` by default
   - npm install -g bower
   - npm install -g gulp
   - bower install
+
+  # install ruby dependencies
+  - gem install bundler
   - bundle install

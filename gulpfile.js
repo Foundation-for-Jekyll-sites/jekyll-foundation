@@ -6,6 +6,8 @@ var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     browserSync   = require('browser-sync'),
     notify        = require('gulp-notify'),
+    rimraf        = require('rimraf'),
+    sequence      = require('run-sequence'),
     spawn         = require('child_process').spawn,
     sass          = require('gulp-ruby-sass'),
     concat        = require('gulp-concat'),
@@ -79,6 +81,17 @@ var messages = {
   sass: '<span style="color: grey">Running:</span> sass',
   javascript: '<span style="color: grey">Running:</span> javascript'
 };
+
+// --------------------------------------------------
+// Helpers
+// --------------------------------------------------
+
+// Delete the "_site" folder
+// This happens every time a build starts
+gulp.task('clean', function(done) {
+  rimraf('_site', done);
+});
+
 
 // --------------------------------------------------
 // Sass
@@ -155,6 +168,14 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 });
 
 // --------------------------------------------------
+// Build
+// --------------------------------------------------
+
+gulp.task('build', function(done) {
+  sequence('clean', ['sass', 'javascript', 'jekyll-build'], done);
+});
+
+// --------------------------------------------------
 // Watch
 // --------------------------------------------------
 
@@ -174,7 +195,7 @@ gulp.task('watch', function() {
 // --------------------------------------------------
 
 /**
- * Default task, running just `gulp` will compile the sass, concat/minify javascript,
- * build the jekyll site, launch BrowserSync & watch files.
+ * Default task, running just `gulp` will build the site and
+ * launch BrowserSync and watch files.
  */
-gulp.task('default', ['sass', 'javascript', 'browser-sync', 'watch']);
+gulp.task('default', ['build', 'browser-sync', 'watch']);

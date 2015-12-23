@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "4.2.3"
+before_script:
+  # travis runs `npm install` by default
+  - npm install -g bower
+  - npm install -g gulp
+  - bower install
+  - bundle install

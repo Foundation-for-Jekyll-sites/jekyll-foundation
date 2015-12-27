@@ -1,6 +1,7 @@
 # Jekyll Foundation
 
-[![Build Status](https://travis-ci.org/core77/jekyll-foundation.svg)](https://travis-ci.org/core77/jekyll-foundation) [![Join the chat at https://gitter.im/core77/jekyll-foundation](https://badges.gitter.im/core77/jekyll-foundation.svg)](https://gitter.im/core77/jekyll-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/core77/jekyll-foundation.svg)](https://travis-ci.org/core77/jekyll-foundation) 
+[![Join the chat at https://gitter.im/core77/jekyll-foundation](https://badges.gitter.im/core77/jekyll-foundation.svg)](https://gitter.im/core77/jekyll-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Quickstart your Jekyll (v3) project with Zurb Foundation for Sites (v6, sass).
   
@@ -37,9 +38,14 @@ Git clone this repository, or download it into a directory of your choice. Insid
 
 ## Usage
 
-###Start Gulp
-`gulp`  
-This will build your Jekyll site, give you file watching, browser synchronization, auto-rebuild, CSS injecting etc.
+### Tasks
+`npm start`  
+This will build your Jekyll site, give you file watching, browser synchronization, auto-rebuild, CSS injecting, Sass sourcemaps etc.
+
+`npm build`  
+This builds your site for production, with minified CSS and JavaScript. Run this before you deploy your site!
+
+NOTE: On my linux machine npm build didn't do nothing. Try `npm run build` instead.
 
 `http://127.0.0.1.xip.io:3000`  
 Here you can access your site. If you want to access it with your phone or tablet, use the external access adress which is showing up in the terminal window.

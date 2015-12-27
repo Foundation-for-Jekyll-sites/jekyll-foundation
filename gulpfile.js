@@ -2,20 +2,25 @@
 // Load Plugins
 // --------------------------------------------------
 
-var gulp          = require('gulp'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    browserSync   = require('browser-sync'),
-    notify        = require('gulp-notify'),
-    rimraf        = require('rimraf'),
-    sequence      = require('run-sequence'),
-    spawn         = require('child_process').spawn,
-    sass          = require('gulp-ruby-sass'),
-    concat        = require('gulp-concat'),
-    uglify        = require('gulp-uglify');
+var $             = require('gulp-load-plugins')();
+var argv          = require('yargs').argv;
+var autoprefixer  = require('gulp-autoprefixer');
+var browserSync   = require('browser-sync');
+var concat        = require('gulp-concat');
+var gulp          = require('gulp');
+var notify        = require('gulp-notify');
+var rimraf        = require('rimraf');
+var sequence      = require('run-sequence');
+var sass          = require('gulp-sass');
+var spawn         = require('child_process').spawn;
+var uglify        = require('gulp-uglify');
 
 // --------------------------------------------------
 // General Config
 // --------------------------------------------------
+
+// Check for --production flag
+var isProduction = !!(argv.production);
 
 // Browsers to target when prefixing CSS.
 var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
@@ -102,14 +107,15 @@ gulp.task('clean', function(done) {
  */
 gulp.task('sass', function() {
   browserSync.notify(messages.sass);
-  return sass('assets/scss/*.scss', {
-      style: 'compressed',
-      bundleExec: true
-    })
-    .on('error', function (err) {
-      browserSync.notify(err);
-    })
+  var minifycss = $.if(isProduction, $.minifyCss());
+
+  return gulp.src('assets/scss/*.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass()
+      .on('error', $.sass.logError))
     .pipe(autoprefixer(COMPATIBILITY))
+    .pipe(minifycss)
+    .pipe($.if(!isProduction, $.sourcemaps.write()))
     // for live injecting
     .pipe(gulp.dest('_site/assets/css/'))
     // for future jekyll builds

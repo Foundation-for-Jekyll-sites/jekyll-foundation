@@ -6,14 +6,12 @@ var $             = require('gulp-load-plugins')();
 var argv          = require('yargs').argv;
 var autoprefixer  = require('gulp-autoprefixer');
 var browserSync   = require('browser-sync');
-var concat        = require('gulp-concat');
 var gulp          = require('gulp');
 var notify        = require('gulp-notify');
 var rimraf        = require('rimraf');
 var sequence      = require('run-sequence');
 var sass          = require('gulp-sass');
 var spawn         = require('child_process').spawn;
-var uglify        = require('gulp-uglify');
 
 // --------------------------------------------------
 // General Config
@@ -132,9 +130,16 @@ gulp.task('sass', function() {
 
 gulp.task('javascript', function() {
   browserSync.notify(messages.javascript);
-  gulp.src(PATHS.javascript)
-    .pipe(concat('all.js'))
-    .pipe(uglify({ mangle: false }))
+  var uglify = $.if(isProduction, $.uglify()
+    .on('error', function (e) {
+      console.log(e);
+    }));
+
+  return gulp.src(PATHS.javascript)
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('all.js'))
+    .pipe($.if(isProduction, $.uglify({ mangle: false })))
+    .pipe($.if(!isProduction, $.sourcemaps.write()))
     // for live injecting
     .pipe(gulp.dest('_site/assets/js/'))
     // for future jekyll builds

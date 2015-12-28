@@ -46,16 +46,16 @@ This will build your Jekyll site, give you file watching, browser synchronizatio
 This builds your site for production, with minified CSS and JavaScript. Run this before you deploy your site!
 
 `http://127.0.0.1.xip.io:3000`  
-Here you can access your site. If you want to access it with your phone or tablet, use the external access adress which is showing up in the terminal window.
+Here you can access your site. If you want to access it with your phone or tablet, use the external access address which is showing up in the terminal window.
 
 `http://127.0.0.1.xip.io:3001`  
 Access the Browsersync UI. 
 
 ### Foundation for Sites Components
 
-We don't want to include unused CSS an JavaScript. 
+We don't want to include unused CSS or JavaScript. 
 
-	For the components you want to use, uncomment the component's  
+	Uncomment the components you want to use
 	1. Sass in /assets/scss/foundation/_foundation.scss  
 	2. JavaScript in the gulpfile.js in PATHS (you need to restart gulp)
 
@@ -64,8 +64,8 @@ Customize the variables used by Foundation in the settings file located in /asse
 Place your custom sass in the subfolders of /assets/scss/. These folders follow the [SMACSS](https://smacss.com/) architecture. This should be the most scalable solution - from small to very large sites.
 
 ### Deploy your site
-Rsync ist used here to sync our local _site with the remote host. Adjust the SSH-USER, SSH-HOST and REMOTE-PATH in the Makefile.
+Rsync is used here to sync our local _site with the remote host. Adjust the SSH-USER, SSH-HOST and REMOTE-PATH in the Makefile.
 
-Be careful with this settings since rsync is set to **delete** the files on the remote path!
+Be careful with these settings since rsync is set to **delete** the files on the remote path!
 
 Deploy with `make deploy`.

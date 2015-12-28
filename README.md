@@ -42,10 +42,8 @@ Git clone this repository, or download it into a directory of your choice. Insid
 `npm start`  
 This will build your Jekyll site, give you file watching, browser synchronization, auto-rebuild, CSS injecting, Sass sourcemaps etc.
 
-`npm build`  
+`npm run build`  
 This builds your site for production, with minified CSS and JavaScript. Run this before you deploy your site!
-
-NOTE: On my linux machine npm build didn't do nothing. Try `npm run build` instead.
 
 `http://127.0.0.1.xip.io:3000`  
 Here you can access your site. If you want to access it with your phone or tablet, use the external access adress which is showing up in the terminal window.
@@ -71,11 +69,3 @@ Rsync ist used here to sync our local _site with the remote host. Adjust the SSH
 Be careful with this settings since rsync is set to **delete** the files on the remote path!
 
 Deploy with `make deploy`.
-
-## Credits
-This package is based on the starting point from [@macbleser](https://github.com/macbleser/jekyll-gulp-sass-foundation) (Here's no deploying to Amazon S3 and gulp font tasks).  
-
-The compress.html layout is provided by [@penibelst](http://jch.penibelst.de/).
-
-## License
-This package is licensed under the terms of the MIT license.

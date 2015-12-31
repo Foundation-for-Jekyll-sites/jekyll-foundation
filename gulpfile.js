@@ -117,7 +117,9 @@ gulp.task('sass', function() {
     // for live injecting
     .pipe(gulp.dest('_site/assets/css/'))
     // for future jekyll builds
-    .pipe(gulp.dest('assets/css/'));
+    .pipe(gulp.dest('assets/css/'))
+    //auto-inject styles into browsers
+    .pipe(browserSync.stream());
 });
 
 // --------------------------------------------------
@@ -197,7 +199,8 @@ gulp.task('build', function(done) {
 gulp.task('watch', function() {
   gulp.watch(PATHS.pages, ['jekyll-build', browserSync.reload]);
   gulp.watch('assets/img/**/*', ['jekyll-build', browserSync.reload]);
-  gulp.watch('assets/scss/**/*.scss', ['sass', browserSync.reload]);
+  //no browser reload needed here, browserSync injects the stylesheet into browsers
+  gulp.watch('assets/scss/**/*.scss', ['sass']);
   gulp.watch('assets/js/app.js', ['javascript', browserSync.reload]);
 });
 

@@ -1,0 +1,27 @@
+# Override settings from _config.yml for production
+
+exclude: [
+    'assets/js/app.js',
+    'assets/scss/*.scss',
+    'assets/vendor/foundation-sites/',
+    'assets/vendor/jquery/',
+    'assets/vendor/motion-ui/',
+    'assets/vendor/phpmailer/**/*.html',
+    'assets/vendor/what-input/',
+    'bower.json',
+    'composer.json',
+    'composer.lock',
+    'Gemfile',
+    'Gemfile.lock',
+    'gulpfile.js',
+    'LICENSE.md',
+    'Makefile',
+    'node_modules',
+    'npm-debug.log',
+    'package.json',
+    'README.md',
+    'rev-manifest.json',
+    # additional excludes for production
+    'assets/css/app.css',
+    'assets/js/all.js'
+]

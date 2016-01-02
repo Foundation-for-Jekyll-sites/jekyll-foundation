@@ -4,6 +4,7 @@ assets/css/app.css
 # JavaScript
 assets/js/all.js
 assets/js/all-min.js
+rev-manifest.json
 
 # Cache
 .sass-cache/

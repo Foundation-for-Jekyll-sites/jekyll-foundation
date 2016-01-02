@@ -6,8 +6,10 @@ var $             = require('gulp-load-plugins')();
 var argv          = require('yargs').argv;
 var autoprefixer  = require('gulp-autoprefixer');
 var browserSync   = require('browser-sync');
+var collect       = require('gulp-rev-collector');
 var gulp          = require('gulp');
 var notify        = require('gulp-notify');
+var rev           = require('gulp-rev');
 var rimraf        = require('rimraf');
 var sequence      = require('run-sequence');
 var sass          = require('gulp-sass');
@@ -69,6 +71,10 @@ var PATHS = {
 
     // Site's JavaScript
     'assets/js/app.js'
+  ],
+  assets: [
+    'assets/css/app.css',
+    'assets/js/all.js',
   ]
 };
 
@@ -114,8 +120,8 @@ gulp.task('sass', function() {
     .pipe(autoprefixer(COMPATIBILITY))
     .pipe(minifycss)
     .pipe($.if(!isProduction, $.sourcemaps.write()))
-    // for live injecting
-    .pipe(gulp.dest('_site/assets/css/'))
+    // for live injecting, for production builds we write the revised version
+    .pipe($.if(!isProduction, gulp.dest('_site/assets/css/')))
     // for future jekyll builds
     .pipe(gulp.dest('assets/css/'))
     //auto-inject styles into browsers
@@ -142,8 +148,8 @@ gulp.task('javascript', function() {
     .pipe($.concat('all.js'))
     .pipe($.if(isProduction, $.uglify({ mangle: false })))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
-    // for live injecting
-    .pipe(gulp.dest('_site/assets/js/'))
+    // for live injecting, for production builds we write the revised version
+    .pipe($.if(!isProduction, gulp.dest('_site/assets/js/')))
     // for future jekyll builds
     .pipe(gulp.dest('assets/js/'));
 });
@@ -158,8 +164,14 @@ gulp.task('javascript', function() {
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyll);
   // Spawn jekyll commands
-  return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+  if (isProduction) {
+    return spawn('bundle', ['exec', 'jekyll', 'build',
+      '--config', '_config.yml,_config-production.yml'], {stdio: 'inherit'})
     .on('close', done);
+  } else {
+    return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+    .on('close', done);
+  }
 });
 
 // --------------------------------------------------
@@ -169,7 +181,7 @@ gulp.task('jekyll-build', function(done) {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
       baseDir: '_site/'
@@ -181,11 +193,49 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 });
 
 // --------------------------------------------------
+// Revisioning
+// --------------------------------------------------
+
+/**
+ * Revision all asset files and
+ * write a manifest file
+ */
+
+gulp.task('revision', function() {
+    return gulp.src(PATHS.assets, {base: 'assets'})
+      .pipe(rev())
+      // write revised assets to build dir
+      .pipe(gulp.dest('_site/assets'))
+      .pipe(rev.manifest())
+      // write manifest to jekyll root
+      .pipe(gulp.dest('./'));
+});
+
+
+/**
+ * Replace all links to assets in files
+ * from a manifest file
+ */
+gulp.task('rev:collect', ['revision'], function() {
+  return gulp.src(['./rev-manifest.json',
+    '_site/*.{html,xml,txt,json,css,js}',
+    '_site/**/*.{html,xml,txt,json,css,js}',
+    '!_site/assets/vendor'])
+  .pipe(collect())
+  .pipe(gulp.dest('_site'));
+});
+
+
+// --------------------------------------------------
 // Build
 // --------------------------------------------------
 
 gulp.task('build', function(done) {
-  sequence('clean', ['sass', 'javascript', 'jekyll-build'], done);
+  if(isProduction) {
+    sequence('clean', ['sass', 'javascript'], 'jekyll-build', 'rev:collect', done);
+  } else {
+    sequence('clean', ['sass', 'javascript'], 'jekyll-build', done);
+  }
 });
 
 // --------------------------------------------------
@@ -212,4 +262,6 @@ gulp.task('watch', function() {
  * Default task, running just `gulp` will build the site and
  * launch BrowserSync and watch files.
  */
-gulp.task('default', ['build', 'browser-sync', 'watch']);
+gulp.task('default', function(done) {
+  sequence('build', 'browser-sync', 'watch', done);
+});

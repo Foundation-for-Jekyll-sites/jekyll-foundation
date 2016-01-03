@@ -87,6 +87,7 @@ var PATHS = {
  */
 var messages = {
   jekyll: '<span style="color: grey">Running:</span> jekyll',
+  jekyllincremental: '<span style="color: grey">Running:</span> jekyll incremental',
   sass: '<span style="color: grey">Running:</span> sass',
   javascript: '<span style="color: grey">Running:</span> javascript'
 };
@@ -159,7 +160,7 @@ gulp.task('javascript', function() {
 // --------------------------------------------------
 
 /**
- * Build the Jekyll Site
+ * Build the Jekyll Site (full site builds)
  */
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyll);
@@ -172,6 +173,16 @@ gulp.task('jekyll-build', function(done) {
     return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
     .on('close', done);
   }
+});
+
+/**
+ * Incremental jekyll build
+ */
+gulp.task('jekyll-incremental', function(done) {
+  browserSync.notify(messages.jekyllincremental);
+  // Spawn jekyll commands
+  return spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+  .on('close', done);
 });
 
 // --------------------------------------------------
@@ -247,7 +258,7 @@ gulp.task('build', function(done) {
  * reload the browser
  */
 gulp.task('watch', function() {
-  gulp.watch(PATHS.pages, ['jekyll-build', browserSync.reload]);
+  gulp.watch(PATHS.pages, ['jekyll-incremental', browserSync.reload]);
   gulp.watch('assets/img/**/*', ['jekyll-build', browserSync.reload]);
   //no browser reload needed here, browserSync injects the stylesheet into browsers
   gulp.watch('assets/scss/**/*.scss', ['sass']);

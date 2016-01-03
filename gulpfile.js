@@ -259,7 +259,7 @@ gulp.task('build', function(done) {
  */
 gulp.task('watch', function() {
   gulp.watch(PATHS.pages, ['jekyll-incremental', browserSync.reload]);
-  gulp.watch('assets/img/**/*', ['jekyll-build', browserSync.reload]);
+  gulp.watch('assets/img/**/*', ['jekyll-incremental', browserSync.reload]);
   //no browser reload needed here, browserSync injects the stylesheet into browsers
   gulp.watch('assets/scss/**/*.scss', ['sass']);
   gulp.watch('assets/js/app.js', ['javascript', browserSync.reload]);

@@ -1,10 +1,11 @@
 # Jekyll Foundation
 
-[![Build Status](https://travis-ci.org/core77/jekyll-foundation.svg)](https://travis-ci.org/core77/jekyll-foundation) 
+[![Build Status](https://travis-ci.org/core77/jekyll-foundation.svg)](https://travis-ci.org/core77/jekyll-foundation)
+[![devDependencies](https://david-dm.org/core77/jekyll-foundation/dev-status.svg)](https://david-dm.org/core77/jekyll-foundation#info=devDependencies)
 [![Join the chat at https://gitter.im/core77/jekyll-foundation](https://badges.gitter.im/core77/jekyll-foundation.svg)](https://gitter.im/core77/jekyll-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Quickstart your Jekyll (v3) project with Zurb Foundation for Sites (v6, sass).
-  
+
 Build process: Gulp  
 Asset management: Bower and Composer  
 Deployment: Make and rsync.  
@@ -49,11 +50,11 @@ This builds your site for production, with minified CSS and JavaScript. Run this
 Here you can access your site. If you want to access it with your phone or tablet, use the external access address which is showing up in the terminal window.
 
 `http://127.0.0.1.xip.io:3001`  
-Access the Browsersync UI. 
+Access the Browsersync UI.
 
 ### Foundation for Sites Components
 
-We don't want to include unused CSS or JavaScript. 
+We don't want to include unused CSS or JavaScript.
 
 	Uncomment the components you want to use
 	1. Sass in /assets/scss/foundation/_foundation.scss  
@@ -69,3 +70,10 @@ Rsync is used here to sync our local _site with the remote host. Adjust the SSH-
 Be careful with these settings since rsync is set to **delete** the files on the remote path!
 
 Deploy with `make deploy`.
+
+## Restrictions
+
+### compress.html layout
+
+Inline JavaScript can become broken where // comments used. Please remove the comments or change to /**/ style.  
+[compress.html Docs](http://jch.penibelst.de/)

@@ -1,6 +1,6 @@
 {
   "name": "jekyll-foundation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Starting point for a Jekyll site that uses Zurb Foundation's Sass.",
   "license": "MIT",
   "main": "gulpfile.js",

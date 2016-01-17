@@ -75,6 +75,7 @@ var PATHS = {
   assets: [
     'assets/css/app.css',
     'assets/js/all.js',
+    'assets/img/**'
   ]
 };
 
@@ -208,7 +209,7 @@ gulp.task('browser-sync', function() {
 // --------------------------------------------------
 
 /**
- * Revision all asset files and
+ * Revision asset files in the source dir and
  * write a manifest file
  */
 
@@ -224,7 +225,7 @@ gulp.task('revision', function() {
 
 
 /**
- * Replace all links to assets in files
+ * Replace links to assets in files (_site dir)
  * from a manifest file
  */
 gulp.task('rev:collect', ['revision'], function() {

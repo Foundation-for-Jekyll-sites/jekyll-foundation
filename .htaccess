@@ -36,12 +36,12 @@ ExpiresActive On
     ExpiresByType application/javascript "access plus 10 years"
     ExpiresByType application/x-javascript "access plus 10 years"
 # Images
-    ExpiresByType image/gif "access plus 1 months"
-    ExpiresByType image/jpeg "access plus 1 months"
-    ExpiresByType image/jpg "access plus 1 months"
-    ExpiresByType image/png "access plus 1 months"
-    ExpiresByType image/x-icon "access plus 1 months"
-    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/gif "access plus 10 years"
+    ExpiresByType image/jpeg "access plus 10 years"
+    ExpiresByType image/jpg "access plus 10 years"
+    ExpiresByType image/png "access plus 10 years"
+    ExpiresByType image/x-icon "access plus 10 years"
+    ExpiresByType image/svg+xml "access plus 10 years"
 # Other
     ExpiresByType text/plain "access plus 1 months"
 </IfModule>

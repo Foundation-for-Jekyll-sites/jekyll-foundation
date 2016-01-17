@@ -23,5 +23,6 @@ exclude: [
     'rev-manifest.json',
     # additional excludes for production
     'assets/css/app.css',
-    'assets/js/all.js'
-]
+    'assets/js/all.js',
+    'assets/img/**'
+    ]

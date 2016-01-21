@@ -13,7 +13,7 @@ var rev           = require('gulp-rev');
 var rimraf        = require('rimraf');
 var sequence      = require('run-sequence');
 var sass          = require('gulp-sass');
-var spawn         = require('child_process').spawn;
+var spawn         = require('cross-spawn');
 
 // --------------------------------------------------
 // General Config

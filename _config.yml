@@ -26,6 +26,7 @@ exclude:      [
                 'composer.lock',
                 'Gemfile',
                 'Gemfile.lock',
+                'gulp',
                 'gulpfile.js',
                 'LICENSE.md',
                 'Makefile',

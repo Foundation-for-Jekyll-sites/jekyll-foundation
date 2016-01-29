@@ -27,33 +27,33 @@ javascript:
 
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    # "assets/vendor/foundation-sites/js/foundation.abide.js",
-    # "assets/vendor/foundation-sites/js/foundation.accordion.js",
-    # "assets/vendor/foundation-sites/js/foundation.accordionMenu.js",
-    # "assets/vendor/foundation-sites/js/foundation.drilldown.js",
-    # "assets/vendor/foundation-sites/js/foundation.dropdown.js",
-    # "assets/vendor/foundation-sites/js/foundation.dropdownMenu.js",
-    # "assets/vendor/foundation-sites/js/foundation.equalizer.js",
-    # "assets/vendor/foundation-sites/js/foundation.interchange.js",
-    # "assets/vendor/foundation-sites/js/foundation.magellan.js",
-    # "assets/vendor/foundation-sites/js/foundation.offcanvas.js",
-    # "assets/vendor/foundation-sites/js/foundation.orbit.js",
-    # "assets/vendor/foundation-sites/js/foundation.responsiveMenu.js",
-    # "assets/vendor/foundation-sites/js/foundation.responsiveToggle.js",
-    # "assets/vendor/foundation-sites/js/foundation.reveal.js",
-    # "assets/vendor/foundation-sites/js/foundation.slider.js",
-    # "assets/vendor/foundation-sites/js/foundation.sticky.js",
-    # "assets/vendor/foundation-sites/js/foundation.tabs.js",
-    # "assets/vendor/foundation-sites/js/foundation.toggler.js",
-    # "assets/vendor/foundation-sites/js/foundation.tooltip.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.box.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.keyboard.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.motion.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.nest.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.touch.js",
-    # "assets/vendor/foundation-sites/js/foundation.util.triggers.js",
+    # - "assets/vendor/foundation-sites/js/foundation.abide.js"
+    # - "assets/vendor/foundation-sites/js/foundation.accordion.js"
+    # - "assets/vendor/foundation-sites/js/foundation.accordionMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.drilldown.js"
+    # - "assets/vendor/foundation-sites/js/foundation.dropdown.js"
+    # - "assets/vendor/foundation-sites/js/foundation.dropdownMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.equalizer.js"
+    # - "assets/vendor/foundation-sites/js/foundation.interchange.js"
+    # - "assets/vendor/foundation-sites/js/foundation.magellan.js"
+    # - "assets/vendor/foundation-sites/js/foundation.offcanvas.js"
+    # - "assets/vendor/foundation-sites/js/foundation.orbit.js"
+    # - "assets/vendor/foundation-sites/js/foundation.responsiveMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.responsiveToggle.js"
+    # - "assets/vendor/foundation-sites/js/foundation.reveal.js"
+    # - "assets/vendor/foundation-sites/js/foundation.slider.js"
+    # - "assets/vendor/foundation-sites/js/foundation.sticky.js"
+    # - "assets/vendor/foundation-sites/js/foundation.tabs.js"
+    # - "assets/vendor/foundation-sites/js/foundation.toggler.js"
+    # - "assets/vendor/foundation-sites/js/foundation.tooltip.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.box.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.keyboard.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.motion.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.nest.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.touch.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.triggers.js"
 
     # Paths to your own project code are here
     - "assets/js/!(app).js"
@@ -70,18 +70,18 @@ revision:
       dest: "./"
     src:
       [
-        'assets/css/app.css',
-        'assets/js/all.js',
-        'assets/img/**'
+        "assets/css/app.css",
+        "assets/js/all.js",
+        "assets/img/**"
       ]
   collect:
     dest: "_site"
     src:
       [
-        './rev-manifest.json',
-        '_site/*.{html,xml,txt,json,css,js}',
-        '_site/**/*.{html,xml,txt,json,css,js}',
-        '!_site/assets/vendor'
+        "./rev-manifest.json",
+        "_site/*.{html,xml,txt,json,css,js}",
+        "_site/**/*.{html,xml,txt,json,css,js}",
+        "!_site/assets/vendor"
       ]
 
 sass:
@@ -101,8 +101,8 @@ watch:
   sass: "assets/scss/**/*.scss"
   pages:
     [
-      '*.{md,html,yml,xml}',
-      '{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml}',
-      '!_site/**/*.*',
-      '!assets/**/*.*'
+      "*.{md,html,yml,xml}",
+      "{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml}",
+      "!_site/**/*.*",
+      "!assets/**/*.*"
     ]

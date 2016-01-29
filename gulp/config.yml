@@ -17,12 +17,13 @@ javascript:
   # filename to output
   filename: "all.js"
   notification: "Running JavaScript"
-  # Paths to JavaScript libraries, which are compined into one file
+  # Paths to JavaScript libraries, which are combined into one file
   src:
     # Libraries requried by Foundation
     - "assets/vendor/jquery/dist/jquery.js"
+    - "assets/vendor/what-input/what-input.js"
 
-    # Core Foundation files, all F6 components need this!
+    # Core Foundation files, all Foundation components need this!
     - "assets/vendor/foundation-sites/js/foundation.core.js"
 
     # Individual Foundation components
@@ -56,8 +57,9 @@ javascript:
     # - "assets/vendor/foundation-sites/js/foundation.util.triggers.js"
 
     # Paths to your own project code are here
-    - "assets/js/!(app).js"
-    - "assets/js/app.js"
+    # All the files in this list are concatenated into all.js
+    - "!assets/js/all.js"
+    - "assets/js/*.js"
 
 jekyll:
   notification: "Running jekyll"

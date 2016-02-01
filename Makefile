@@ -7,7 +7,7 @@ REMOTE-PATH = /my-remote-path with trailing slash/
 deploy:
 	rsync -cavze ssh --delete ./_site/ $(SSH-USER)@$(SSH-HOST):$(REMOTE-PATH)
 
-setup:
+install:
 	bundle install
 	npm install
 	bower install

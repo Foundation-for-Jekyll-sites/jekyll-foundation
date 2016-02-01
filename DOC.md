@@ -23,7 +23,9 @@ Git clone this repository, or download it into a directory of your choice. Insid
 1. `bower install` (reference: .bowerrc and bower.json)  
 2. `npm install` (reference: package.json)  
 3. `bundle install` (reference: Gemfile and Gemfile.lock)  
-4. `composer install` (optional, reference: composer.json and composer.lock)  
+4. `composer install` (optional, reference: composer.json and composer.lock) 
+
+Do all that in one step: `make install`
 
 ## Usage
 
@@ -46,7 +48,7 @@ We don't want to include unused CSS or JavaScript.
 
 	Uncomment the components you want to use
 	1. Sass in /assets/scss/foundation/_foundation.scss  
-	2. JavaScript in the gulpfile.js in PATHS (you need to restart gulp)  
+	2. JavaScript in /gulp/config.yml in javascript.src (you need to restart gulp)  
 
 Customize the variables used by Foundation in the settings file located in /assets/scss/foundation/.  
 

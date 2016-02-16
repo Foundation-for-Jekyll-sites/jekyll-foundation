@@ -29,7 +29,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "test": "gulp build"
+    "test": "gulp build --production"
   },
   "repository": {
     "type": "git",

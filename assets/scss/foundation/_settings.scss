@@ -68,6 +68,8 @@
 // $global-radius: 0;
 // $global-text-direction: ltr;
 
+// @include add-foundation-colors;
+
 // 2. Breakpoints
 // --------------
 
@@ -85,7 +87,7 @@
 
 // $grid-row-width: $global-width;
 // $grid-column-count: 12;
-// $grid-column-responsive-gutter: (
+// $grid-column-gutter: (
 //   small: 20px,
 //   medium: 30px,
 // );

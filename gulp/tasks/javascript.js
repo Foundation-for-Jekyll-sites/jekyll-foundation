@@ -13,6 +13,7 @@ gulp.task('javascript', function() {
 
   return gulp.src(config.src)
     .pipe($.sourcemaps.init())
+    .pipe($.babel())
     .pipe($.concat(config.filename))
     .pipe($.if(isProduction, $.uglify({ mangle: false })))
     .pipe($.if(!isProduction, $.sourcemaps.write()))

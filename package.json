@@ -8,7 +8,7 @@
   "devDependencies": {
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.5.0",
-    "babel-plugin-transform-es2015-block-scoping": "^6.5.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.6.5",
     "babel-plugin-transform-es2015-classes": "^6.5.2",
     "babel-plugin-transform-es2015-destructuring": "^6.5.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.5.2",

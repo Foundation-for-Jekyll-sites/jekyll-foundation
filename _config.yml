@@ -10,12 +10,14 @@ include:
   - "_pages"
 
 exclude:
+  - "/assets/"
   - "bower.json"
   - "composer.json"
   - "composer.lock"
   - "DOC.md"
   - "Gemfile"
   - "Gemfile.lock"
+  - "/gulp/"
   - "gulpfile.js"
   - "LICENSE.md"
   - "Makefile"

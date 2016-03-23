@@ -1,0 +1,118 @@
+browsersync:
+  notify: true
+  open:   false
+  port:   3000
+  server:
+    basedir: "_site/"
+  xip:    true
+
+clean:
+  # The jekyll build dir
+  - "_site"
+
+copy:
+  # Paths to static assets that aren't (S)CSS or JavaScript
+  # because these are completely handled by the sass and javascript tasks
+  assets:
+    # all files below the assets dir
+    - "assets/**/*"
+    # exclusions:
+    - "!assets/{js,scss,css}/**/*"   # js, scss and css files
+    - "!assets/css{,/**}"            # css dir
+    - "!assets/js{,/**}"             # js dir
+    - "!assets/scss{,/**}"           # scss dir
+    - "!assets/vendor{,/**}"         # vendor dir
+  dist: "_site/assets/"
+  notification: "Running Copy"
+
+javascript:
+  dest:
+    jekyllRoot: "assets/js/"
+    buildDir: "_site/assets/js/"
+  # filename to output
+  filename: "all.js"
+  notification: "Running JavaScript"
+  # Paths to JavaScript libraries, which are combined into one file
+  src:
+    # Libraries requried by Foundation
+    - "assets/vendor/jquery/dist/jquery.js"
+    - "assets/vendor/what-input/what-input.js"
+
+    # Core Foundation files, all Foundation components need this!
+    - "assets/vendor/foundation-sites/js/foundation.core.js"
+
+    # Individual Foundation components
+    # If you aren't using a component, just remove it from the list
+    # - "assets/vendor/foundation-sites/js/foundation.abide.js"
+    # - "assets/vendor/foundation-sites/js/foundation.accordion.js"
+    # - "assets/vendor/foundation-sites/js/foundation.accordionMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.drilldown.js"
+    # - "assets/vendor/foundation-sites/js/foundation.dropdown.js"
+    # - "assets/vendor/foundation-sites/js/foundation.dropdownMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.equalizer.js"
+    # - "assets/vendor/foundation-sites/js/foundation.interchange.js"
+    # - "assets/vendor/foundation-sites/js/foundation.magellan.js"
+    # - "assets/vendor/foundation-sites/js/foundation.offcanvas.js"
+    # - "assets/vendor/foundation-sites/js/foundation.orbit.js"
+    # - "assets/vendor/foundation-sites/js/foundation.responsiveMenu.js"
+    # - "assets/vendor/foundation-sites/js/foundation.responsiveToggle.js"
+    # - "assets/vendor/foundation-sites/js/foundation.reveal.js"
+    # - "assets/vendor/foundation-sites/js/foundation.slider.js"
+    # - "assets/vendor/foundation-sites/js/foundation.sticky.js"
+    # - "assets/vendor/foundation-sites/js/foundation.tabs.js"
+    # - "assets/vendor/foundation-sites/js/foundation.toggler.js"
+    # - "assets/vendor/foundation-sites/js/foundation.tooltip.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.box.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.keyboard.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.motion.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.nest.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.touch.js"
+    # - "assets/vendor/foundation-sites/js/foundation.util.triggers.js"
+
+    # Paths to your own project code are here
+    # All the files in this list and in the js dir are concatenated into all.js
+    - "!assets/js/all.js"
+    - "assets/js/*.js"
+
+jekyll:
+  notification: "Running jekyll"
+
+revision:
+  revision:
+    dest: "_site/assets"
+    manifest:
+      dest: "./"
+    src:
+      - "assets/css/app.css"
+      - "assets/js/all.js"
+      - "assets/img/**"
+  collect:
+    dest: "_site"
+    src:
+      - "./rev-manifest.json"
+      - "_site/*.{html,xml,txt,json,css,js}"
+      - "_site/**/*.{html,xml,txt,json,css,js}"
+      - "!_site/assets/vendor"
+
+sass:
+  # Autoprefixer will make sure your CSS works with these browsers
+  compatibility:
+    - "last 2 versions"
+    - "ie >= 9"
+  dest:
+    jekyllRoot: "assets/css/"
+    buildDir: "_site/assets/css/"
+  notification: "Running Sass"
+  src: "assets/scss/*.scss"
+
+watch:
+  images: "assets/img/**/*"
+  javascript: "assets/js/app.js"
+  sass: "assets/scss/**/*.scss"
+  pages:
+    - "*.{md,html,yml,xml}"
+    - "{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml}"
+    - "!_site/**/*.*"
+    - "!assets/**/*.*"

@@ -79,23 +79,6 @@ javascript:
 jekyll:
   notification: "Running jekyll"
 
-revision:
-  revision:
-    dest: "_site/assets"
-    manifest:
-      dest: "./"
-    src:
-      - "assets/css/app.css"
-      - "assets/js/all.js"
-      - "assets/img/**"
-  collect:
-    dest: "_site"
-    src:
-      - "./rev-manifest.json"
-      - "_site/*.{html,xml,txt,json,css,js}"
-      - "_site/**/*.{html,xml,txt,json,css,js}"
-      - "!_site/assets/vendor"
-
 sass:
   # Autoprefixer will make sure your CSS works with these browsers
   compatibility:
@@ -108,7 +91,9 @@ sass:
   src: "assets/scss/*.scss"
 
 watch:
-  images: "assets/img/**/*"
+  media:
+    - "assets/img/**/*"
+    - "assets/video/**/*"
   javascript: "assets/js/app.js"
   sass: "assets/scss/**/*.scss"
   pages:

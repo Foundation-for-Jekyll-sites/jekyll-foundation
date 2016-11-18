@@ -17,11 +17,9 @@ gulp.task('sass', function() {
     .pipe(autoprefixer(config.compatibility))
     .pipe(minifycss)
     .pipe($.if(!isProduction, $.sourcemaps.write()))
-    // Write the file to source dir, it's the source for the revision task!
+    // Write the file to source dir and build dir
     .pipe(gulp.dest(config.dest.jekyllRoot))
-    // Write to build dir only for development builds
-    // For production builds the revision task writes the assets into the build dir
-    .pipe($.if(!isProduction, gulp.dest(config.dest.buildDir)))
+    .pipe(gulp.dest(config.dest.buildDir))
     // Auto-inject styles into browsers
     .pipe(browserSync.stream());
 });

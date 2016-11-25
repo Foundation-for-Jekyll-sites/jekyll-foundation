@@ -41,3 +41,7 @@ incremental:      true
 permalink:        "/blog/:year/:title/"
 paginate_path:    "/blog/page:num"
 paginate:         5
+
+compress_html:
+  ignore:
+    envs: [development]

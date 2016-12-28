@@ -11,7 +11,7 @@ install:
 	bundle install
 	npm install
 	bower install
-	composer install
+	# composer install
 
 ssh:
 	ssh $(SSH-USER)@$(SSH-HOST)

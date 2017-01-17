@@ -146,6 +146,20 @@ title: Kitchen Sink
 
 ---
 
+## Card
+
+<div class="card" style="width: 300px;">
+  <div class="card-divider">
+    <h4>I'm featured</h4>
+  </div>
+  <img src="http://placeimg.com/300/150/tech">
+  <div class="card-section">
+    <p>This card makes use of the card-divider element.</p>
+  </div>
+</div>
+
+---
+
 ## Close Button
 
 <div class="callout">
@@ -256,9 +270,9 @@ title: Kitchen Sink
 
 ---
 
-## Flex Video
+## Responsive Embed
 
-<div class="flex-video">
+<div class="responsive-embed">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/V9gkYw35Vws" frameborder="0" allowfullscreen></iframe>
 </div>
 

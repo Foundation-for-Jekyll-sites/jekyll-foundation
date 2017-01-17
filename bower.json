@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "~6.2",
+    "foundation-sites": "~6.3",
     "motion-ui": "~1.2"
   },
   "private": true

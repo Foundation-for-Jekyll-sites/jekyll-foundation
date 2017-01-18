@@ -70,6 +70,7 @@ javascript:
     # - "assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js"
     # - "assets/vendor/foundation-sites/js/foundation.util.touch.js"
     # - "assets/vendor/foundation-sites/js/foundation.util.triggers.js"
+    # - "assets/vendor/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
 
     # Paths to your own project code are here
     # All the files in this list and in the js dir are concatenated into all.js

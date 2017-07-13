@@ -24,7 +24,7 @@
 // Behold, here are all the Foundation components.
 
 @import '../../../node_modules/foundation-sites/scss/foundation';
-// @import '../../vendor/motion-ui/motion-ui';
+@import '../../../node_modules/motion-ui/src/motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-xy-grid-classes;
@@ -67,5 +67,5 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
-// @include motion-ui-transitions;
-// @include motion-ui-animations;
+@include motion-ui-transitions;
+@include motion-ui-animations;

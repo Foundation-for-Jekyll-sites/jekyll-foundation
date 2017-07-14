@@ -10,9 +10,8 @@ before_install:
 
 before_script:
   # install node.js dependencies, travis runs `npm install` by default
-  - npm install -g bower
   - npm install -g gulp
-  - bower install
+  - yarn install
 
   # install ruby dependencies
   - gem install bundler

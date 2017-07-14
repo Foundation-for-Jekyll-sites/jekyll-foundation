@@ -49,3 +49,7 @@ Gemfile.lock
 
 # Composer
 composer.lock
+
+
+# Yarn
+yarn.lock

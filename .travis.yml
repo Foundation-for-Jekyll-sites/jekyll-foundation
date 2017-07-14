@@ -10,9 +10,8 @@ before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 
 before_script:
-  # install node.js dependencies, travis runs `npm install` by default
-  - npm install -g gulp
-  - yarn install
+  # install dependencies
+  # travis runs `yarn install` when yarn.lock exists
 
   # install ruby dependencies
   - gem install bundler

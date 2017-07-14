@@ -7,12 +7,11 @@ node_js:
 
 before_install:
 - rvm install 2.2.3
+- curl -o- -L https://yarnpkg.com/install.sh | bash
 
 before_script:
-  # install node.js dependencies, travis runs `npm install` by default
-  - npm install -g bower
-  - npm install -g gulp
-  - bower install
+  # install dependencies
+  # travis runs `yarn install` when yarn.lock exists
 
   # install ruby dependencies
   - gem install bundler

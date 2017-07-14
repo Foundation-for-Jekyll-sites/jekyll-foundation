@@ -9,8 +9,7 @@ deploy:
 
 install:
 	bundle install
-	npm install
-	bower install
+	yarn install
 	# composer install
 
 ssh:

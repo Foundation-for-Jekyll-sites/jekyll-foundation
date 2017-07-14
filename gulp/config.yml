@@ -35,42 +35,52 @@ javascript:
   # Paths to JavaScript libraries, which are combined into one file
   src:
     # Libraries requried by Foundation
-    - "assets/vendor/jquery/dist/jquery.js"
-    - "assets/vendor/what-input/what-input.js"
+    - "node_modules/jquery/dist/jquery.js"
+    - "node_modules/what-input/what-input.js"
 
     # Core Foundation files, all Foundation components need this!
-    - "assets/vendor/foundation-sites/js/foundation.core.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.core.js"
 
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    # - "assets/vendor/foundation-sites/js/foundation.abide.js"
-    # - "assets/vendor/foundation-sites/js/foundation.accordion.js"
-    # - "assets/vendor/foundation-sites/js/foundation.accordionMenu.js"
-    # - "assets/vendor/foundation-sites/js/foundation.drilldown.js"
-    # - "assets/vendor/foundation-sites/js/foundation.dropdown.js"
-    # - "assets/vendor/foundation-sites/js/foundation.dropdownMenu.js"
-    # - "assets/vendor/foundation-sites/js/foundation.equalizer.js"
-    # - "assets/vendor/foundation-sites/js/foundation.interchange.js"
-    # - "assets/vendor/foundation-sites/js/foundation.magellan.js"
-    # - "assets/vendor/foundation-sites/js/foundation.offcanvas.js"
-    # - "assets/vendor/foundation-sites/js/foundation.orbit.js"
-    # - "assets/vendor/foundation-sites/js/foundation.responsiveMenu.js"
-    # - "assets/vendor/foundation-sites/js/foundation.responsiveToggle.js"
-    # - "assets/vendor/foundation-sites/js/foundation.reveal.js"
-    # - "assets/vendor/foundation-sites/js/foundation.slider.js"
-    # - "assets/vendor/foundation-sites/js/foundation.sticky.js"
-    # - "assets/vendor/foundation-sites/js/foundation.tabs.js"
-    # - "assets/vendor/foundation-sites/js/foundation.toggler.js"
-    # - "assets/vendor/foundation-sites/js/foundation.tooltip.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.box.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.keyboard.js"
-    - "assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.motion.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.nest.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.touch.js"
-    # - "assets/vendor/foundation-sites/js/foundation.util.triggers.js"
-    # - "assets/vendor/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
+
+    # Foundation Utilities
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.box.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.imageLoader.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.nest.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.timer.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.timerAndImageLoader.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.touch.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.util.triggers.js"
+
+    # Foundation Plugins
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.abide.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.equalizer.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.interchange.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.toggler.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.smoothScroll.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.sticky.js"
+
+    # Foundation Components
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.accordion.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.accordionMenu.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.drilldown.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.dropdown.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.dropdownMenu.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.magellan.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.offcanvas.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.orbit.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveAccordionTabs.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveMenu.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveToggle.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.reveal.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.slider.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.tabs.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.tooltip.js"
+    - "node_modules/foundation-sites/dist/js/plugins/foundation.zf.responsiveAccordionTabs.js"
 
     # Paths to your own project code are here
     # All the files in this list and in the js dir are concatenated into all.js

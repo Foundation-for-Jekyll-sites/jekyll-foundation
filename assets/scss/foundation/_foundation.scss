@@ -27,10 +27,18 @@
 @import '../../../node_modules/motion-ui/src/motion-ui';
 
 @include foundation-global-styles;
+
+// Uncomment to use the XY Grid
 // @include foundation-xy-grid-classes;
-@include foundation-grid;
-//@include foundation-flex-grid;
-// @include foundation-flex-classes;
+
+// Uncomment to use the standard grid
+// @include foundation-grid;
+
+// This is the default Flexbox Grid
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+
+// Comment out the components you don't need
 @include foundation-typography;
 @include foundation-forms;
 @include foundation-button;
@@ -67,5 +75,6 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+// Comment out if you don't want to use Foundation's Motion UI plugin
 @include motion-ui-transitions;
 @include motion-ui-animations;

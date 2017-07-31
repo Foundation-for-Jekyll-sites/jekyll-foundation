@@ -4,7 +4,9 @@ source "https://rubygems.org"
 # ruby '2.2.3'
 
 # Gem Requirements
-gem 'sass',  '>=3.4.3'
-gem 'jekyll', '>=3.0'
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate'
+group :jekyll_plugins do
+	gem 'jekyll', '>=3.0'
+	gem 'sass'
+	gem 'jekyll-sitemap'
+	gem 'jekyll-paginate'
+end

@@ -26,6 +26,7 @@ exclude:
   - "package.json"
   - "README.md"
   - "rev-manifest.json"
+  - "yarn.lock"
 
 # Plugins
 # Add plugins in the Gemfile

@@ -3,7 +3,7 @@ permalink: /kitchen-sink/
 layout: page
 title: Kitchen Sink
 ---
-
+<p class="lead">Everything but.</p>
 
 <div class="off-campus-wrapper">
   <div class="off-canvas-wrapper-inner" data-off-campus-wrapper>
@@ -13,7 +13,7 @@ title: Kitchen Sink
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
 
-      <h1>Abide</h1>
+      <h2>Abide</h2>
       <form data-abide novalidate>
         <div class="row">
           <div class="columns">
@@ -60,7 +60,7 @@ title: Kitchen Sink
         <div class="row">
           <div class="medium-6 columns">
             <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
-              <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
+              <input type="text" placeholder="https://foundation.zurb.com" pattern="url">
             </label>
           </div>
           <div class="medium-6 columns">
@@ -105,7 +105,9 @@ title: Kitchen Sink
         </div>
       </form>
 
-      <h1>Accordion</h1>
+      <hr />
+
+      <h2>Accordion</h2>
       <ul class="accordion" data-accordion>
         <li class="accordion-item is-active" data-accordion-item>
           <a href="#" class="accordion-title">Accordion 1</a>
@@ -130,8 +132,10 @@ title: Kitchen Sink
         </li>
       </ul>
 
-     <h1>Accordion Menu</h1>
-      <ul class="vertical menu accordion-menu" data-accordion-menu>
+      <hr />
+
+      <h2>Accordion Menu</h2>
+      <ul class="vertical menu" data-accordion-menu>
         <li>
           <a href="#0">Item 1</a>
           <ul class="menu vertical nested is-active">
@@ -157,14 +161,32 @@ title: Kitchen Sink
         <li><a href="#0">Item 3</a></li>
       </ul>
 
-      h1{Badge}
+      <hr />
+
+      <h2>Badge</h2>
       <span class="primary badge">1</span>
       <span class="secondary badge">2</span>
       <span class="success badge">3</span>
       <span class="alert badge">A</span>
       <span class="warning badge">B</span>
 
-      <h1>Buttons</h1>
+      <hr />
+
+      <h2>Breadcrumbs</h2>
+      <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+          <li><a href="#0">Home</a></li>
+          <li><a href="#0">Features</a></li>
+          <li class="disabled">Gene Splicing</li>
+          <li>
+            <span class="show-for-sr">Current: </span> Cloning
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      <h2>Buttons</h2>
       <!-- Anchors (links) -->
       <a href="#0" class="button">Learn More</a>
       <a href="#features" class="button">View All Features</a>
@@ -184,7 +206,9 @@ title: Kitchen Sink
         <a class="button">Three</a>
       </div>
 
-      <h1>Callout</h1>
+      <hr />
+
+      <h2>Callout</h2>
       <div class="callout">
         <h5>This is a callout.</h5>
         <p>It has an easy to override visual style, and is appropriately subdued.</p>
@@ -221,15 +245,19 @@ title: Kitchen Sink
         <a href="#0">It's dangerous to go alone, take this.</a>
       </div>
 
-      <h1>Close Button</h1>
-      <div class="callout">
-        <button class="close-button" aria-label="Close alert" type="button">
+      <hr />
+
+      <h2>Close Button</h2>
+      <div class="callout" data-closable>
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
-        <p>This is a static close button example.</p>
+        <p>This is a close button example.</p>
       </div>
 
-      <h1>Drilldown Menu</h1>
+      <hr />
+
+      <h2>Drilldown Menu</h2>
       <ul class="vertical menu" data-drilldown style="width: 200px" id="m1">
         <li>
           <a href="#0">Item 1</a>
@@ -273,7 +301,9 @@ title: Kitchen Sink
         <li><a href='#0'> Item 4</a></li>
       </ul>
 
-      <h1>Dropdown Menu</h1>
+      <hr />
+
+      <h2>Dropdown Menu</h2>
       <ul class="dropdown menu" data-dropdown-menu>
         <li>
           <a>Item 1</a>
@@ -313,13 +343,17 @@ title: Kitchen Sink
         <li><a href='#0'>Item 4</a></li>
       </ul>
 
-      <h1>Dropdown Pane</h1>
+      <hr />
+
+      <h2>Dropdown Pane</h2>
       <button class="button" type="button" data-toggle="example-dropdown">Toggle Dropdown</button>
       <div class="dropdown-pane" id="example-dropdown" data-dropdown>
         Just some junk that needs to be said. Or not. Your choice.
       </div>
 
-      <h1>Equalizer</h1>
+      <hr />
+
+      <h2>Equalizer</h2>
       <div class="row" data-equalizer data-equalize-on="medium" id="test-eq">
         <div class="medium-4 columns">
           <div class="callout" data-equalizer-watch>
@@ -338,8 +372,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Flex Grid</h1>
-      <p>Note, this will only work if you have flex grid enabled</p>
+      <hr />
+
+      <h2>Flex Grid</h2>
       <div class="row">
         <div class="small-6 columns">6 columns</div>
         <div class="small-6 columns">6 columns</div>
@@ -349,18 +384,24 @@ title: Kitchen Sink
         <div class="medium-6 large-8 columns">12/6/8 columns</div>
       </div>
 
-      <h1>Responsive Embed</h1>
+      <hr />
+
+      <h2>Responsive Embed</h2>
       <div class="responsive-embed">
         <iframe width="420" height="315" src="https://www.youtube.com/embed/mM5_T-F1Yn4" frameborder="0" allowfullscreen></iframe>
       </div>
 
-      <h1>Float Classes</h1>
+      <hr />
+
+      <h2>Float Classes</h2>
       <div class="callout clearfix">
         <a class="button float-left">Left</a>
         <a class="button float-right">Right</a>
       </div>
 
-      <h1>Forms</h1>
+      <hr />
+
+      <h2>Forms</h2>
       <form>
         <label>Input Label
           <input type="text" placeholder=".small-12.columns" aria-describedby="exampleHelpText">
@@ -413,8 +454,9 @@ title: Kitchen Sink
         </div>
       </form>
 
-      <h1>Float Grid</h1>
-      <p>This is foundation's float-grid</p>
+      <hr />
+
+      <h2>Grid</h2>
       <div class="row">
         <div class="small-2 medium-3 large-4 columns">2/3/4 columns</div>
         <div class="small-4 medium-3 large-4 columns">4/3/4 columns</div>
@@ -439,17 +481,23 @@ title: Kitchen Sink
         <div class="medium-4 large-8 columns">12/4/8 columns</div>
       </div>
 
-      <h1>Interchange</h1>
+      <hr />
+
+      <h2>Interchange</h2>
       <img data-interchange="[http://foundation.zurb.com/sites/docs/assets/img/interchange/small.jpg, small], [http://foundation.zurb.com/sites/docs/assets/img/interchange/medium.jpg, medium], [http://foundation.zurb.com/sites/docs/assets/img/interchange/large.jpg, large]">
 
-      <h1>Label</h1>
+      <hr />
+
+      <h2>Label</h2>
       <span class="primary label">Primary Label</span>
       <span class="secondary label">Secondary Label</span>
       <span class="success label">Success Label</span>
       <span class="alert label">Alert Label</span>
       <span class="warning label">Warning Label</span>
 
-      <h1>Magellen</h1>
+      <hr />
+
+      <h2>Magellen</h2>
       <ul class="horizontal menu" data-magellan>
         <li><a href="#first">First Arrival</a></li>
         <li><a href="#second">Second Arrival</a></li>
@@ -470,10 +518,12 @@ title: Kitchen Sink
         </section>
       </div>
 
-      <h1>Media Object</h1>
+      <hr />
+
+      <h2>Media Object</h2>
       <div class="media-object">
         <div class="media-object-section">
-          <img src= "http://placeimg.com/200/200/people">
+          <img src= "https://placeimg.com/200/200/people">
         </div>
         <div class="media-object-section">
           <h4>Dreams feel real while we're in them.</h4>
@@ -481,7 +531,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Menu</h1>
+      <hr />
+
+      <h2>Menu</h2>
       <ul class="menu">
         <li><a href="#0"><i class="fi-list"></i> <span>One</span></a></li>
         <li><a href="#0"><i class="fi-list"></i> <span>Two</span></a></li>
@@ -489,11 +541,15 @@ title: Kitchen Sink
         <li><a href="#0"><i class="fi-list"></i> <span>Four</span></a></li>
       </ul>
 
-      <h1>Off-canvas</h1>
+      <hr />
+
+      <h2>Off-canvas</h2>
       <!-- Fire Off-canvas -->
       <button type="button" class="button" data-toggle="offCanvasLeft">Open Menu</button>
 
-      <h1>Orbit</h1>
+      <hr />
+
+      <h2>Orbit</h2>
       <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
         <ul class="orbit-container">
           <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
@@ -527,7 +583,9 @@ title: Kitchen Sink
         </nav>
       </div>
 
-      <h1>Pagination</h1>
+      <hr />
+
+      <h2>Pagination</h2>
       <ul class="pagination" role="navigation" aria-label="Pagination">
         <li class="disabled">Previous <span class="show-for-sr">page</span></li>
         <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
@@ -540,7 +598,9 @@ title: Kitchen Sink
         <li><a href="#0" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
       </ul>
 
-      <h1>Progress Bar</h1>
+      <hr />
+
+      <h2>Progress Bar</h2>
       <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
         <div class="progress-meter" style="width: 25%">
           <p class="progress-meter-text">25%</p>
@@ -565,7 +625,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Responsive Menu</h1>
+      <hr />
+
+      <h2>Responsive Menu</h2>
       <ul class="vertical medium-horizontal menu">
         <li><a href="#0"><i class="fi-list"></i> <span>One</span></a></li>
         <li><a href="#0"><i class="fi-list"></i> <span>Two</span></a></li>
@@ -573,7 +635,9 @@ title: Kitchen Sink
         <li><a href="#0"><i class="fi-list"></i> <span>Four</span></a></li>
       </ul>
 
-      <h1>Responsive Toggle</h1>
+      <hr />
+
+      <h2>Responsive Toggle</h2>
       <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Menu</div>
@@ -603,7 +667,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Reveal</h1>
+      <hr />
+
+      <h2>Reveal</h2>
       <p><a data-open="exampleModal1">Click me for a modal</a></p>
 
       <div class="reveal" id="exampleModal1" data-reveal>
@@ -615,7 +681,9 @@ title: Kitchen Sink
         </button>
       </div>
 
-      <h1>Slider</h1>
+      <hr />
+
+      <h2>Slider</h2>
       <div class="slider" data-slider data-initial-start='50' data-end='200'>
         <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
         <span class="slider-fill" data-slider-fill></span>
@@ -636,7 +704,9 @@ title: Kitchen Sink
         <input type="hidden">
       </div>
 
-      <h1>Sticky</h1>
+      <hr />
+
+      <h2>Sticky</h2>
       <div class="row">
         <div class="columns small-6" id="example1" data-something>
           <p id="doodle">
@@ -659,7 +729,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Switch</h1>
+      <hr />
+
+      <h2>Switch</h2>
       <div class="switch tiny">
         <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
         <label class="switch-paddle" for="tinySwitch">
@@ -681,7 +753,9 @@ title: Kitchen Sink
         </label>
       </div>
 
-      <h1>Table</h1>
+      <hr />
+
+      <h2>Table</h2>
       <table>
         <thead>
           <tr>
@@ -713,7 +787,9 @@ title: Kitchen Sink
         </tbody>
       </table>
 
-      <h1>Tabs</h1>
+      <hr />
+
+      <h2>Tabs</h2>
       <ul class="tabs" data-tabs id="example-tabs">
         <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
         <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
@@ -750,7 +826,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Thumbnail</h1>
+      <hr />
+
+      <h2>Thumbnail</h2>
       <div class="row">
         <div class="small-4 columns">
           <img class="thumbnail" src="http://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
@@ -763,7 +841,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Title Bar</h1>
+      <hr />
+
+      <h2>Title Bar</h2>
       <div class="title-bar">
         <div class="title-bar-left">
           <button class="menu-icon" type="button"></button>
@@ -774,7 +854,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Toggler</h1>
+      <hr />
+
+      <h2>Toggler</h2>
       <p><a data-toggle="menuBar">Expand!</a></p>
 
       <ul class="menu" id="menuBar" data-toggler=".expanded">
@@ -784,10 +866,14 @@ title: Kitchen Sink
         <li><a href="#0"><i class="fi-list"></i> <span>Four</span></a></li>
       </ul>
 
-      <h1>Tooltip</h1>
+      <hr />
+
+      <h2>Tooltip</h2>
       <p>The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.</p>
 
-      <h1>Top Bar</h1>
+      <hr />
+
+      <h2>Top Bar</h2>
       <div class="top-bar">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
@@ -812,7 +898,9 @@ title: Kitchen Sink
         </div>
       </div>
 
-      <h1>Visibility Classes</h1>
+      <hr />
+
+      <h2>Visibility Classes</h2>
       <p>You are on a small screen or larger.</p>
       <p class="show-for-medium">You are on a medium screen or larger.</p>
       <p class="show-for-large">You are on a large screen or larger.</p>
@@ -842,6 +930,7 @@ title: Kitchen Sink
       </header>
       <main id="mainContent" role="main" tabindex="0">
       </main>
+
     </div>
   </div>
 </div>

@@ -15,4 +15,4 @@ It provides a [Gulp.js](http://gulpjs.com/) workflow with
 - Asset management is done by Bower (and Composer if you need serverside libraries)  
 - Deployment with rsync
 
-[Getting started](https://github.com/core77/jekyll-foundation/wiki/Getting-started)
+[Getting started](https://github.com/Foundation-for-Jekyll-sites/jekyll-foundation/wiki/Getting-started)

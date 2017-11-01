@@ -23,8 +23,8 @@
 // --------------------------------------------------
 // Behold, here are all the Foundation components.
 
-@import '../../../node_modules/foundation-sites/scss/foundation';
-@import '../../../node_modules/motion-ui/src/motion-ui';
+@import 'node_modules/foundation-sites/scss/foundation';
+@import 'node_modules/motion-ui/src/motion-ui';
 
 @include foundation-global-styles;
 

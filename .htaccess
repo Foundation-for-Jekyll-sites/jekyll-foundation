@@ -46,5 +46,11 @@ ExpiresActive On
     ExpiresByType text/plain "access plus 1 months"
 </IfModule>
 
+# Block access to these files for security reasons
+<Files ~ "\.DS_Store$">
+    Order allow,deny
+    Deny from all
+</Files>
+
 # -- Compression --
 SetOutputFilter DEFLATE

@@ -10,6 +10,7 @@ include:
   - "_pages"
 
 exclude:
+  - ".DS_Store"
   - "/assets/"
   - "bower.json"
   - "composer.json"
@@ -27,6 +28,7 @@ exclude:
   - "README.md"
   - "rev-manifest.json"
   - "yarn.lock"
+  - "yarn-error.log"
 
 # Plugins
 # Add plugins in the Gemfile

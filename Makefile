@@ -5,12 +5,9 @@ SSH-HOST = my-host
 REMOTE-PATH = /my-remote-path with trailing slash/
 
 deploy:
-	rsync -cavze ssh --delete ./_site/ $(SSH-USER)@$(SSH-HOST):$(REMOTE-PATH)
+	rsync -cavze ssh --delete --exclude '.DS_Store' ./_site/ $(SSH-USER)@$(SSH-HOST):$(REMOTE-PATH)
 
 install:
 	bundle install
 	yarn install
 	# composer install
-
-ssh:
-	ssh $(SSH-USER)@$(SSH-HOST)

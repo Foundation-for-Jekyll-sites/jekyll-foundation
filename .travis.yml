@@ -14,5 +14,5 @@ before_script:
   # travis runs `yarn install` when yarn.lock exists
 
   # install ruby dependencies
-  - gem install bundler
+  - gem install bundler -v 1.17.3
   - bundle install
